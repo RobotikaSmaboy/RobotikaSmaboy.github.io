@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/2e425a2a85.js" crossorigin="anonymous"></script>
+
+	<!-- Typeit.js -->
+	<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+</head>
+<body>
+	<!-- CSS -->
+	<style>
+		.full-img {
+			background-image: url("./images/bg.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			/* opacity: 0.8; */
+		}
+	</style>
+
+	<!-- Header -->
+	<header>
+		<div id="intro" class="text-light text-center bg-black vh-100 full-img">
+			<div class="container">
+				<div class="row">
+					<div class="col mt-5 mb-5">
+						<img src="./images/logo.png" alt="Logo" height="140" width="303" class="img-responsive mb-4">
+						<h1>SMABOY Robotics Squad</h1>
+
+						<p id="runningText" class="lead"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<div class="d-grid gap-2">
+							<a href="https://github.com/SmaboyRobotics" class="btn btn-outline-secondary">
+								<i class="fa-brands fa-github"></i>
+								GitHub Organization
+							</a>
+						</div>
+					</div>
+					<div class="col-md-6 mb-3">
+						<div class="d-grid gap-2">
+							<a href="https://instagram.com/manoedinata" class="btn btn-outline-danger">
+								<i class="fa-brands fa-instagram"></i>
+								Our Instagram
+							</a>
+						</div>
+					</div>
+					<!-- <div class="col-md-12 mb-3">
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-success">
+								<i class="fa-solid fa-file"></i>
+								Daftar SRS
+							</button>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Contents -->
+	<!-- <main>
+		<div id="about" class="text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col mt-5 mb-5">
+						<h1>Tentang</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main> -->
+
+	<footer>
+		<script>
+			var runningOne = "Keep Connecting,"
+			var runningTwo = "Keep Innovating."
+			  document.addEventListener("DOMContentLoaded", function () {
+				new TypeIt("#runningText", {
+					speed: 90,
+					startDelay: 900,
+					loop: true
+				}).type(runningOne, { delay: 900 })
+				.move(null, { to: "END", instant: true, delay: 300 })
+				.type(" " + `<strong>${runningTwo}</strong>`, { delay: 900 })
+				.go();
+			})
+
+		</script>
+	</footer>
+	
+</body>
+</html>
