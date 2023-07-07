@@ -1874,6 +1874,11 @@ section {
   padding: 60px 0 0 0;
 }
 
+.hero .hero-img {
+  display: block;
+  margin: auto;
+}
+
 @media (min-width: 1365px) {
   .hero {
     background-attachment: fixed;
@@ -1909,6 +1914,8 @@ section {
 }
 
 .hero .btn-get-started:hover {
+  background: rgba(255, 255, 255);
+  color: var(--color-primary);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
