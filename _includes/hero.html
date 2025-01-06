@@ -4,21 +4,21 @@
       <div
         class="col-lg-6 order-2 order-lg-2 d-flex flex-column justify-content-center text-center text-lg-start"
       >
-        <h2>Sugeng Rawuh!</h2>
-        <p>Selamat datang di website Robotika Smaboy (RoBoys).</p>
+        <h2>{{ page.hero_title }}</h2>
+        <p>{{ page.hero_description }}</p>
+        {% if page.cta_link %}
         <div class="d-flex justify-content-center justify-content-lg-start">
-          <a
-            href="https://robotika.sman1boyolangu.sch.id/join.html"
-            target="_blank"
-            class="btn-get-started"
-            >Join #RoBoys</a
+          <a href="{{ page.cta_link }}" target="_blank" class="btn-get-started"
+            >{{ page.cta_text }}</a
           >
         </div>
+        {% endif %}
       </div>
 
+      {% if page.hero_image %}
       <div class="col-lg-6 order-1 order-lg-1">
         <img
-          src="assets/img/logo.png"
+          src="{{ page.hero_image }}"
           class="hero-img img-fluid"
           alt=""
           data-aos="zoom-out"
@@ -27,6 +27,7 @@
           height="50%"
         />
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
